@@ -1,18 +1,25 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 
 const Blogpage = () => {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
-      .then((data) => setPosts(data));
+      .then((data) => {
+        setTimeout(() => {
+          setPosts(data);
+          setLoading(false);
+        }, 2000);
+      });
   }, []);
 
   return (
     <div>
-      <h1>Our news</h1>
+      {loading && <Loader />}
       {posts.map((post) => (
         <Link key={post.id} to={`/posts/${post.id}`}>
           <li>{post.title}</li>
