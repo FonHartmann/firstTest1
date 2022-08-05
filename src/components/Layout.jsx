@@ -7,7 +7,12 @@ const Layout = () => {
         <NavLink to="/" className="headStyle">
           Home
         </NavLink>
-        <NavLink to="/login">LogIn</NavLink>
+        <NavLink to="/" className="headStyle">
+          Blog
+        </NavLink>
+        <NavLink to="/login" className="headStyle">
+          LogIn
+        </NavLink>
       </div>
       <div>
         <Outlet />
