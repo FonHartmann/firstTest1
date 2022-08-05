@@ -18,7 +18,7 @@ const Blogpage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="App-logo">
       {loading && <Loader />}
       {posts.map((post) => (
         <Link key={post.id} to={`/posts/${post.id}`}>
