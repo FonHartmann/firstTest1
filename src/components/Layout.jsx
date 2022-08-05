@@ -4,18 +4,22 @@ const Layout = () => {
   return (
     <>
       <div>
-        <NavLink to="/" className="headStyle">
-          Home
-        </NavLink>
-        <NavLink to="/posts" className="headStyle">
-          Blog
-        </NavLink>
-        <NavLink to="/login" className="headStyle">
-          LogIn
-        </NavLink>
-      </div>
-      <div>
-        <Outlet />
+        <header className="header">
+          <nav className="topNav">
+            <NavLink to="/" className="headStyle">
+              Home
+            </NavLink>
+            <NavLink to="/posts" className="headStyle">
+              Blog
+            </NavLink>
+            <NavLink to="/login" className="headStyle">
+              LogIn
+            </NavLink>
+          </nav>
+        </header>
+        <div>
+          <Outlet />
+        </div>
       </div>
     </>
   );
