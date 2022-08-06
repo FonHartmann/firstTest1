@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { TextareaAutosize } from "@mui/material";
 
 const Editpost = () => {
   const { id } = useParams();
@@ -15,13 +16,9 @@ const Editpost = () => {
     <div>
       {post && (
         <h1>
-          <textarea
-            rows="18"
-            cols="92"
-            onkeypress="if(use_kb) return decode(event);"
-          >
+          <TextareaAutosize style={{ width: 500 }}>
             {post.body}
-          </textarea>
+          </TextareaAutosize>
           <button>Save</button>
         </h1>
       )}
