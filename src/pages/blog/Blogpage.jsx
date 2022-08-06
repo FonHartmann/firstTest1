@@ -13,7 +13,7 @@ const Blogpage = () => {
         setTimeout(() => {
           setPosts(data);
           setLoading(false);
-        }, 2000);
+        }, 1000);
       });
   }, []);
 
