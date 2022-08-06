@@ -16,10 +16,10 @@ const Editpost = () => {
     <div>
       {post && (
         <h1>
-          <TextareaAutosize style={{ width: 500 }}>
-            {post.body}
-          </TextareaAutosize>
-          <button>Save</button>
+          <TextareaAutosize defaultValue={post.body}></TextareaAutosize>
+          <div>
+            <button>Save</button>
+          </div>
         </h1>
       )}
     </div>
