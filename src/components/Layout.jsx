@@ -5,7 +5,7 @@ const Layout = () => {
     <>
       <div>
         <header className="header">
-          <nav className="topNav">
+          <nav className="topNav ">
             <NavLink to="/" className="headStyle">
               Home
             </NavLink>
